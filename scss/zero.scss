@@ -1,0 +1,44 @@
+@import "_fonts.scss";
+/*--------------------------------------------*/
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	font-size: 14px;
+	line-height: 1;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+.wraper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.page .main {
+	flex: 1 1 auto;
+}
