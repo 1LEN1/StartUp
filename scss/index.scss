@@ -610,6 +610,73 @@ body.lock {
 	bottom: 32px;
 }
 /*------------------------------------------------------------------------*/
+.main {
+	// .main__works
+	&__works {
+	}
+}
+.works {
+	// .works__container
+	&__container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	// .works__title
+	&__title {
+	}
+}
+.tabs {
+	// .tabs__items
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		width: 416px;
+		margin: 0px auto 55px auto;
+	}
+	// .tabs__item
+	&__item {
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__pane
+	&__pane {
+		display: none;
+		justify-content: space-between;
+	}
+	// .tabs__picture
+	&__picture {
+		width: 360px;
+		height: 320px;
+		flex: 1 1 33.333px;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+		padding: 0 15px;
+		@media (max-width: 800px) {
+			&:nth-child(4) {
+				display: none;
+			}
+			&:nth-child(5) {
+				display: none;
+			}
+			&:nth-child(6) {
+				display: none;
+			}
+		}
+	}
+}
+.tabs__item.active {
+	color: #c0301c;
+}
+.tabs__pane.active {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -30px;
+	padding: 0 20px;
+}
+
+/*------------------------------------------------------------------------*/
 .ask {
 	background: url("../img/main/ask/ask__bg.jpg") center/cover no-repeat;
 	position: relative;
@@ -1171,7 +1238,6 @@ body.lock {
 }
 .btn {
 }
-
 /*-----------------------------------------------------------------------------*/
 .footer {
 	background-color: #c0301c;

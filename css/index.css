@@ -771,6 +771,72 @@ body.lock {
 }
 
 /*------------------------------------------------------------------------*/
+.works__container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.tabs__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 416px;
+  margin: 0px auto 55px auto;
+}
+
+.tabs__pane {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tabs__picture {
+  width: 360px;
+  height: 320px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333px;
+          flex: 1 1 33.333px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+@media (max-width: 800px) {
+  .tabs__picture:nth-child(4) {
+    display: none;
+  }
+  .tabs__picture:nth-child(5) {
+    display: none;
+  }
+  .tabs__picture:nth-child(6) {
+    display: none;
+  }
+}
+
+.tabs__item.active {
+  color: #c0301c;
+}
+
+.tabs__pane.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -30px;
+  padding: 0 20px;
+}
+
+/*------------------------------------------------------------------------*/
 .ask {
   background: url("../img/main/ask/ask__bg.jpg") center/cover no-repeat;
   position: relative;
