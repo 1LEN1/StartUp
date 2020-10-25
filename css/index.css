@@ -787,6 +787,13 @@ body.lock {
   margin: 0px auto 55px auto;
 }
 
+.tabs__item {
+  color: #555555;
+  font-family: "RobotoSlab";
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .tabs__pane {
   display: none;
   -webkit-box-pack: justify;
