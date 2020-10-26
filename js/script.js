@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('.menu__icon').click(function (event) {
+	$('.menu__icon, .menu__link').click(function (event) {
 		$('.icon-menu, .menu__body').toggleClass('active')
 		$('body').toggleClass('lock')
 		$('.welcome__link, .item-row__icon').toggleClass('z-index__hiden')
@@ -26,7 +26,7 @@ for (let anchor of anchors) {
 		const blockID = anchor.getAttribute('href');
 		document.querySelector('' + blockID).scrollIntoView({
 			behavior: "smooth",
-			block: "nearest"
+			block: "start"
 		})
 	})
 }
