@@ -776,56 +776,28 @@ body.lock {
   padding-bottom: 100px;
 }
 
+.tabs {
+  font-family: "RobotoSlab";
+}
+
 .tabs__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 416px;
-  margin: 0px auto 55px auto;
+  text-align: center;
+  margin: 0px 0px 60px 0px;
 }
 
 .tabs__item {
   color: #555555;
-  font-family: "RobotoSlab";
   font-size: 16px;
   font-weight: 400;
+  line-height: 24px;
+  display: inline-block;
+  margin: 0px 0px 10px 0px;
+  padding: 0 12.5px;
 }
 
-.tabs__pane {
-  display: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.tabs__picture {
-  width: 360px;
-  height: 320px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333px;
-          flex: 1 1 33.333px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
-  padding: 0 15px;
-}
-
-@media (max-width: 800px) {
-  .tabs__picture:nth-child(4) {
-    display: none;
-  }
-  .tabs__picture:nth-child(5) {
-    display: none;
-  }
-  .tabs__picture:nth-child(6) {
-    display: none;
+@media (max-width: 550px) {
+  .tabs__item {
+    padding: 0 40px;
   }
 }
 
@@ -833,14 +805,154 @@ body.lock {
   color: #c0301c;
 }
 
+.tabs__pane {
+  display: none;
+}
+
 .tabs__pane.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.pane {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -30px;
-  padding: 0 20px;
+  margin: 0 -15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .pane {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow: auto;
+  }
+}
+
+.pane__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+  padding: 15px;
+  max-width: 555px;
+  margin: 0px auto;
+}
+
+@media (max-width: 600px) {
+  .pane__item {
+    width: 300px;
+    padding: 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.pane__img {
+  width: 100%;
+  height: 100%;
+}
+
+.pane__picture {
+  position: relative;
+  overflow: hidden;
+}
+
+.pane__picture::before {
+  content: "";
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -200%;
+  background-color: #c02e1bb3;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.pane__picture:hover::before {
+  -webkit-transform: skew(-45deg);
+      -ms-transform: skew(-45deg);
+          transform: skew(-45deg);
+  left: -50%;
+}
+
+.baner {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.baner__title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.baner__subtitle {
+  color: #ffffff;
+  font-family: "Roboto Slab";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.baner__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 38px;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #c0301c;
+  font-family: "RobotoSlab";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.baner__btn span {
+  padding-right: 18px;
+  background: url("../img/icons/angle_left.svg") right center no-repeat;
+}
+
+.pane__picture:hover .baner {
+  top: 0;
 }
 
 /*------------------------------------------------------------------------*/
