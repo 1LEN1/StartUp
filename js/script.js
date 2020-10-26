@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	$('.menu__icon, .menu__link').click(function (event) {
-		$('.icon-menu, .menu__body').toggleClass('active')
 		$('body').toggleClass('lock')
+		$('.icon-menu, .menu__body').toggleClass('active')
 		$('.welcome__link, .item-row__icon').toggleClass('z-index__hiden')
 	})
 });
